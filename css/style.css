@@ -1,0 +1,376 @@
+/** global element styling **/
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6fa;
+  font: 1.1rem "PT Sans", sans-serif;
+  color: #9c9c9c;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7f8ff4;
+}
+
+/** global classes styling **/
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #3675e1;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background-color: rgba(255, 55, 0, 0.564);
+  transition: background-color 2s;
+}
+.btn--primary:active {
+  background: #3675e1;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-left: -6rem;
+}
+
+.form_field {
+  width: 25rem;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #eee;
+}
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  width: 60vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 30px;
+}
+
+@media (max-width: 650px) {
+  .logo img {
+    margin: 0 auto;
+  }
+}
+
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+nav ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 350px;
+  margin-top: 30px;
+}
+#hero h2 {
+  font-size: x-large;
+  /* margin-top: 30px; */
+  margin-bottom: 50px;
+  word-wrap: break-word;
+}
+/* #hero input[type="email"] {
+  height: 55px;
+  width: 25rem;
+  max-width: 600px;
+  padding: 5px;
+  margin: 10px;
+  border: 0px;
+  border-radius: 4px;
+  background: transparent;
+  background-color: rgba(238, 238, 238, 0.427);
+  font-size: 1.25em;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+#hero input[type="submit"] {
+  max-width: 200px;
+  width: 100%;
+  height: 50px;
+  margin: 15px 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0f9af1;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+/* #hero input[type="submit"]:hover {
+  background-color: orange;
+  transition: background-color 2s;
+} */
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#features {
+  margin-top: 30px;
+}
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 20vw;
+  color: rgba(14, 122, 216, 0.4);
+}
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+/* #how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+} 
+ #how-it-works iframe {
+  height: 562px;
+  width: 100%;
+} */
+
+.iframe-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* height: 400px;
+  width: 560px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#pricing #tenor,
+#pricing #bass,
+#pricing #valve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+#pricing #tenor .level,
+#pricing #bass .level,
+#pricing #valve .level {
+  background-color: #ddd;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#pricing #tenor h2,
+#pricing #bass h2,
+#pricing #valve h2 {
+  margin-top: 15px;
+}
+#pricing #tenor ol,
+#pricing #bass ol,
+#pricing #valve ol {
+  margin: 15px 0;
+}
+#pricing #tenor ol li,
+#pricing #bass ol li,
+#pricing #valve ol li {
+  padding: 5px 0;
+}
+#pricing #tenor button,
+#pricing #bass button,
+#pricing #valve button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #0f9af1;
+  font-weight: 400;
+  color: #eee;
+}
+#pricing #tenor button:hover,
+#pricing #bass button:hover,
+#pricing #valve button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  #pricing #tenor,
+  #pricing #bass,
+  #pricing #valve {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+} */
+
+footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 30px;
+  align-content: center;
+}
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+}
+footer ul li {
+  padding: 0 10px;
+}
+footer span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
